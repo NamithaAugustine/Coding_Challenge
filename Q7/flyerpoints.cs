@@ -19,7 +19,9 @@ namespace Q7
             set {
                 _frequentFlyerPoints = value;
                     
-                if (Miles >= 10000 && Miles <20000)
+                if(Miles<10000)
+                    _frequentFlyerPoints = 0;
+                else if (Miles >= 10000 && Miles <20000)
                     _frequentFlyerPoints = 10;
                 else if (Miles >= 20000 && Miles < 50000)
                     _frequentFlyerPoints = 20;
